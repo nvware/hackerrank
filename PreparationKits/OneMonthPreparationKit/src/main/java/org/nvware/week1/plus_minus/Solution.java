@@ -21,7 +21,17 @@ class Result {
 
     public static void plusMinus(List<Integer> arr) {
         // Write your code here
+        int n=arr.size();
+        long positives=arr.stream().filter(x->x>0).count();
+        long negatives = arr.stream().filter(x -> x < 0).count();
+        long zeros = arr.stream().filter(x -> x == 0).count();
+        double ratioOFPositive = (double) positives / n;
+        double ratioOFNegative = (double) negatives / n;
+        double ratioOFZero = (double) zeros / n;
 
+        System.out.printf("%.6f\n", ratioOFPositive);
+        System.out.printf("%.6f\n", ratioOFNegative);
+        System.out.printf("%.6f\n", ratioOFZero);
     }
 
 }

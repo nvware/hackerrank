@@ -28,8 +28,9 @@ public interface RedirectedOutputTest {
 
         // Verify the output
         String result = "";
+        String outs=getOutput();
         try {
-            assertEquals(expectedOutput, getOutput());
+            assertEquals(expectedOutput, outs);
             result = "Test passed!";// Print out a message indicating that the test has passed
         } catch (AssertionError e) {
             result = "Wrong Answer :(";
