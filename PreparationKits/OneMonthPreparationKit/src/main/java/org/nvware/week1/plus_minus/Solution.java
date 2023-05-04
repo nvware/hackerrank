@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
+
 /**
  * @author <a href="mailto:nvware">Hamid Valizadegan</a>
  * Modified by <a href="mailto:nvware">Hamid Valizadegan</a>
@@ -21,8 +22,8 @@ class Result {
 
     public static void plusMinus(List<Integer> arr) {
         // Write your code here
-        int n=arr.size();
-        long positives=arr.stream().filter(x->x>0).count();
+        int n = arr.size();
+        long positives = arr.stream().filter(x -> x > 0).count();
         long negatives = arr.stream().filter(x -> x < 0).count();
         long zeros = arr.stream().filter(x -> x == 0).count();
         double ratioOFPositive = (double) positives / n;

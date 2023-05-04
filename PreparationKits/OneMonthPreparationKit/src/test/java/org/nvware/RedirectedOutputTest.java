@@ -8,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 public interface RedirectedOutputTest {
     ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     PrintStream originalOut = System.out;
+
     public default void setUpStreams() {
         System.setOut(new PrintStream(outContent));
     }
@@ -28,7 +29,7 @@ public interface RedirectedOutputTest {
 
         // Verify the output
         String result = "";
-        String outs=getOutput();
+        String outs = getOutput();
         try {
             assertEquals(expectedOutput, outs);
             result = "Test passed!";// Print out a message indicating that the test has passed
