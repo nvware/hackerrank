@@ -12,18 +12,6 @@ import java.io.*;
  * Modified by <a href="mailto:nvware">Hamid Valizadegan</a>
  */
 public class SolutionTest implements RedirectedOutputTest {
-    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-
-    @Before
-    public void setUpStreams() {
-        System.setOut(new PrintStream(outContent));
-    }
-
-    @After
-    public void restoreStreams() {
-        System.setOut(System.out);
-    }
-
     @Test
     public void sampleTestCase0() {
         // Prepare test input
