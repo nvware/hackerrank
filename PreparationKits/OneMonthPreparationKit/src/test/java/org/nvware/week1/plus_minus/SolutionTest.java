@@ -7,7 +7,10 @@ import org.nvware.Main;
 import org.nvware.RedirectedOutputTest;
 
 import java.io.*;
-
+/**
+ * @author <a href="mailto:nvware">Hamid Valizadegan</a>
+ * Modified by <a href="mailto:nvware">Hamid Valizadegan</a>
+ */
 public class SolutionTest implements RedirectedOutputTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
