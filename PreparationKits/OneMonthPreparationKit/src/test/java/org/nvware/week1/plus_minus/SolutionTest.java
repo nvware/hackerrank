@@ -22,13 +22,14 @@ public class SolutionTest implements RedirectedOutputTest {
                 "0.333333\n" +
                 "0.166667\n"; // Insert expected output here
         // Call main method
-        testMainOutput(() -> {
+        runTestCase(input, expectedOutput, () -> {
             try {
                 Solution.main(null);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-        }, expectedOutput);
+        });
+
 
     }
 
@@ -45,13 +46,14 @@ public class SolutionTest implements RedirectedOutputTest {
                 "0.250000\n";
         // Insert expected output here
         // Call main method
-        testMainOutput(() -> {
+        runTestCase(input, expectedOutput, () -> {
             try {
                 Solution.main(null);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-        }, expectedOutput);
-
+        });
     }
+
+
 }

@@ -16,7 +16,7 @@ public final class MainTest implements RedirectedOutputTest {
     public void sampleTestCase0() {
         String expectedOutput = "Hello world!\r\n";
         // Call main method
-        testMainOutput(() -> Main.main(null), expectedOutput);
+        runTestCase("", expectedOutput, () -> Main.main(null));
 
     }
 }

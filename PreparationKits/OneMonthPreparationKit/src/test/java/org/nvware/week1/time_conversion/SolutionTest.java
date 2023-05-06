@@ -12,19 +12,21 @@ import java.io.IOException;
  */
 public class SolutionTest implements RedirectedOutputTest {
     @Test
-    public void sampleTestCase0() throws IOException {
+    public void sampleTestCase0() {
         // Prepare test input
         String input = "07:05:45PM\n";
         System.setIn(new ByteArrayInputStream(input.getBytes())); //set inputStream to system.in
 
         String expectedOutput = "19:05:45\r\n"; // Insert expected output here
         // Call main method
-        testMainOutput(() -> {
+        runTestCase(input, expectedOutput, () -> {
             try {
                 Solution.main(null);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-        }, expectedOutput);
+        });
     }
+
+
 }

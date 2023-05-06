@@ -1,8 +1,8 @@
-package org.nvware.week1.min_max_sum;
+package org.nvware.week1.mini_max_sum;
 
 import org.junit.Test;
+import org.nvware.Main;
 import org.nvware.RedirectedOutputTest;
-import org.nvware.week1.mini_max_sum.Solution;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -21,13 +21,13 @@ public class SolutionTest implements RedirectedOutputTest {
 
         String expectedOutput = "10 14\r\n"; // Insert expected output here
         // Call main method
-        testMainOutput(() -> {
+        runTestCase(input, expectedOutput, () -> {
             try {
                 Solution.main(null);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-        }, expectedOutput);
+        });
 
     }
 
@@ -39,13 +39,14 @@ public class SolutionTest implements RedirectedOutputTest {
         System.setIn(inputStream);
         String expectedOutput = "299 9271\r\n"; // Insert expected output here
         // Call main method
-        testMainOutput(() -> {
+        runTestCase(input, expectedOutput, () -> {
             try {
                 Solution.main(null);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-        }, expectedOutput);
+        });
+
 
     }
 
@@ -57,13 +58,12 @@ public class SolutionTest implements RedirectedOutputTest {
         System.setIn(inputStream);
         String expectedOutput = "2063136757 2744467344\r\n"; // Insert expected output here
         // Call main method
-        testMainOutput(() -> {
+        runTestCase(input, expectedOutput, () -> {
             try {
                 Solution.main(null);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-        }, expectedOutput);
-
+        });
     }
 }
