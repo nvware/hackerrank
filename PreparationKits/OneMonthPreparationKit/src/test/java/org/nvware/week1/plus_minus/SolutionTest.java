@@ -16,8 +16,8 @@ public class SolutionTest implements RedirectedOutputTest {
     public void sampleTestCase0() throws IOException {
         // Prepare test input
         String input = "6\n-4 3 -9 0 4 1\n";
-        InputStream inputStream = new ByteArrayInputStream(input.getBytes());
-        System.setIn(inputStream);
+        System.setIn(new ByteArrayInputStream(input.getBytes())); //set inputStream to system.in
+
         String expectedOutput = "0.500000\n" +
                 "0.333333\n" +
                 "0.166667\n"; // Insert expected output here

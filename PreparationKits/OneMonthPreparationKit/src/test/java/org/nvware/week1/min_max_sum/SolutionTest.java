@@ -17,8 +17,8 @@ public class SolutionTest implements RedirectedOutputTest {
     public void sampleTestCase0() throws IOException {
         // Prepare test input
         String input = "1 2 3 4 5\n";
-        InputStream inputStream = new ByteArrayInputStream(input.getBytes());
-        System.setIn(inputStream);
+        System.setIn(new ByteArrayInputStream(input.getBytes())); //set inputStream to system.in
+
         String expectedOutput = "10 14\r\n"; // Insert expected output here
         // Call main method
         testMainOutput(() -> {
