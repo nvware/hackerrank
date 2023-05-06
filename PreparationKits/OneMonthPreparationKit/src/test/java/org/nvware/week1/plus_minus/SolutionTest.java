@@ -1,12 +1,11 @@
 package org.nvware.week1.plus_minus;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-import org.nvware.week1.plus_minus.Solution;
 import org.nvware.RedirectedOutputTest;
 
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * @author <a href="mailto:nvware">Hamid Valizadegan</a>

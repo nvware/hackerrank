@@ -19,7 +19,7 @@ public class SolutionTest implements RedirectedOutputTest {
         String input = "1 2 3 4 5\n";
         InputStream inputStream = new ByteArrayInputStream(input.getBytes());
         System.setIn(inputStream);
-        String expectedOutput = "10 14\r\n" ; // Insert expected output here
+        String expectedOutput = "10 14\r\n"; // Insert expected output here
         // Call main method
         testMainOutput(() -> {
             try {
@@ -30,13 +30,14 @@ public class SolutionTest implements RedirectedOutputTest {
         }, expectedOutput);
 
     }
+
     @Test
     public void sampleTestCase1() throws IOException {
         // Prepare test input
         String input = "7 69 2 221 8974\n";
         InputStream inputStream = new ByteArrayInputStream(input.getBytes());
         System.setIn(inputStream);
-        String expectedOutput = "299 9271\r\n" ; // Insert expected output here
+        String expectedOutput = "299 9271\r\n"; // Insert expected output here
         // Call main method
         testMainOutput(() -> {
             try {
@@ -47,13 +48,14 @@ public class SolutionTest implements RedirectedOutputTest {
         }, expectedOutput);
 
     }
+
     @Test
     public void testCase1() throws IOException {
         // Prepare test input
         String input = "256741038 623958417 467905213 714532089 938071625\n";
         InputStream inputStream = new ByteArrayInputStream(input.getBytes());
         System.setIn(inputStream);
-        String expectedOutput = "2063136757 2744467344\r\n" ; // Insert expected output here
+        String expectedOutput = "2063136757 2744467344\r\n"; // Insert expected output here
         // Call main method
         testMainOutput(() -> {
             try {

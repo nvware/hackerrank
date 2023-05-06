@@ -1,16 +1,13 @@
 package org.nvware.week1.mini_max_sum;
 
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.function.*;
-import java.util.regex.*;
-import java.util.stream.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Stream;
 
-import static java.util.stream.Collectors.*;
+import static java.util.stream.Collectors.toList;
 
 /**
  * @author <a href="mailto:nvware">Hamid Valizadegan</a>
@@ -31,7 +28,7 @@ class Result {
         long sum = arr.stream().mapToLong(Long::valueOf).sum();
         long minimumSum = sum - max;
         long maximumSum = sum - min;
-        System.out.printf("%d %d%n",minimumSum,maximumSum);
+        System.out.printf("%d %d%n", minimumSum, maximumSum);
     }
 
 }
