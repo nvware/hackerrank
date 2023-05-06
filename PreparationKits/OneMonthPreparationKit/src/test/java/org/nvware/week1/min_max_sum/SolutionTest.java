@@ -47,4 +47,21 @@ public class SolutionTest implements RedirectedOutputTest {
         }, expectedOutput);
 
     }
+    @Test
+    public void testCase1() throws IOException {
+        // Prepare test input
+        String input = "256741038 623958417 467905213 714532089 938071625\n";
+        InputStream inputStream = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inputStream);
+        String expectedOutput = "2063136757 2744467344\r\n" ; // Insert expected output here
+        // Call main method
+        testMainOutput(() -> {
+            try {
+                Solution.main(null);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }, expectedOutput);
+
+    }
 }

@@ -26,11 +26,11 @@ class Result {
 
     public static void miniMaxSum(List<Integer> arr) {
         // Write your code here
-        int min = arr.stream().min(Comparator.naturalOrder()).orElse(0);
-        int max = arr.stream().max(Comparator.naturalOrder()).orElse(0);
-        int sum = arr.stream().mapToInt(Integer::intValue).sum();
-        int minimumSum = sum - max;
-        int maximumSum = sum - min;
+        long min = arr.stream().min(Comparator.naturalOrder()).orElse(0);
+        long max = arr.stream().max(Comparator.naturalOrder()).orElse(0);
+        long sum = arr.stream().mapToLong(Long::valueOf).sum();
+        long minimumSum = sum - max;
+        long maximumSum = sum - min;
         System.out.printf("%d %d%n",minimumSum,maximumSum);
     }
 
